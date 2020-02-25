@@ -1,0 +1,1 @@
+Proje veritabanının instnwnd.sql dosyası içerisindeki script ile oluşturulması gerekmektedir. Ayrıca user işlemleri için de gerekli olan tabloların oluşturulması ve Context içerisindeki server bilgilerinin kullanılan server'a özel bilgiler ile tanımlanması gerekmektedir.

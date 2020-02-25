@@ -1,0 +1,13 @@
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\Core.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\Entities.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.csprojAssemblyReference.cache
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfoInputs.cache
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfo.cs
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\DataAccess.deps.json
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\DataAccess.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\DataAccess.pdb
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\Core.pdb
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\Entities.pdb
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CopyComplete
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb

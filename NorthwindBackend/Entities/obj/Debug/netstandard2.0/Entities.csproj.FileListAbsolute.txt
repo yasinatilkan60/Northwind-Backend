@@ -1,0 +1,11 @@
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\bin\Debug\netstandard2.0\Entities.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\bin\Debug\netstandard2.0\Entities.pdb
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\bin\Debug\netstandard2.0\Core.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\bin\Debug\netstandard2.0\Core.pdb
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\obj\Debug\netstandard2.0\Entities.csproj.CopyComplete
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\obj\Debug\netstandard2.0\Entities.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Entities\obj\Debug\netstandard2.0\Entities.pdb
