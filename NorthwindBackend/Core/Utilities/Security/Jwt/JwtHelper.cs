@@ -72,7 +72,7 @@ namespace Core.Utilities.Security.Jwt
             // Extension yazmak ileri c# tekniğidir. Extension ile bir class'ı genişletiriz.
             claims.AddNameIdentifier(user.Id.ToString());
             claims.AddEmail(user.Email);
-            claims.AddName($"{user.FistName} {user.LastName}");
+            claims.AddName($"{user.FirstName} {user.LastName}");
             claims.AddRoles(operationClaims.Select(c => c.Name).ToArray()); // operationClaims.Select(c => c.Name).ToArray() ile dizi şeklinde extension'a gönderim yapıldı.
             return claims;
         }

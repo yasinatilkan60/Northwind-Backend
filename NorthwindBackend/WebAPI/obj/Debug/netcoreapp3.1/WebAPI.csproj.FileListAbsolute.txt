@@ -131,3 +131,7 @@ B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\n
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
