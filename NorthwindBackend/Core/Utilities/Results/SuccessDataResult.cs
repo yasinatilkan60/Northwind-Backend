@@ -12,11 +12,11 @@ namespace Core.Utilities.Results
         public SuccessDataResult(T data) : base(data, true)
         {
         }
-        public SuccessDataResult(string message) : base(default, true, message) // Data'yı default olarak geçebilirim. (Kullanmasak da olurdu.)
+        public SuccessDataResult(string message) : base(default, true, message) 
         {
 
         }
-        public SuccessDataResult():base(default,true) // message'ı geçmeyebilirim. (Kullanmasak da olurdu.)
+        public SuccessDataResult():base(default,true) 
         {
 
         }

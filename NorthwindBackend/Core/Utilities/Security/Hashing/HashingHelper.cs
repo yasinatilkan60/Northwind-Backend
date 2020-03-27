@@ -6,30 +6,29 @@ namespace Core.Utilities.Security.Hashing
 {
     public class HashingHelper
     {
-        public static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt) // hash parametreleri sabittir.
+        public static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt) 
         {
-            // out ile değişen nesne byte array içerisine aktarılır.
             using (var hmac = new System.Security.Cryptography.HMACSHA512())
             {
                 passwordSalt = hmac.Key;
                 passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-                // password hash oluşturuldu.
             }
         }
+
         public static bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
         {
-            using (var hmac = new System.Security.Cryptography.HMACSHA512())
+            using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
             {
                 var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-                // iki hashi nasıl karşılaştıracağız.
                 for (int i = 0; i < computedHash.Length; i++)
                 {
-                    if (computedHash[i]!=passwordHash[i]) // kendi hesapladığımız hash ile db'den gelen hashi karşılaştıracağız.
+                    if (computedHash[i]!=passwordHash[i])
                     {
                         return false;
                     }
                 }
             }
+
             return true;
         }
     }

@@ -4,12 +4,10 @@ using System.Text;
 
 namespace Core.Utilities.Security.Jwt
 {
-    // AccessToken erişim için kullanılacak olan anahtardır.
     public class AccessToken
     {
         public string Token { get; set; }
-        public DateTime  Expiration { get; set; } // Token'ın ne kadar geçerli olduğunu gösterir.
+        public DateTime Expiration { get; set; }
 
-        // Daha sonra refresh token sistemi de kullanılabilir.
     }
 }

@@ -31,13 +31,13 @@ namespace Business.Concrete
         public IDataResult<User> Login(UserForLoginDto userForLoginDto)
         {
             var userToCheck = _userService.GetByMail(userForLoginDto.Email);// mevcut kullanıcıyı getirelim.
-            if (userToCheck==null)
+            if (userToCheck == null)
             {
                 return new ErrorDataResult<User>(Messages.UserNotFound);
             }
             // Eğer kllanıcı var ise kullanıcıdan gelen açık şifreyi salt yaparak, veritabanındaki ilgili hashi mevcut hash ile karşılaştırırız.
             // kodu burada salt ile beraber hash'e çevirebilirim ama başka bir yerde de kullanma ihtimaline karşı bunu HashHelper yazacağız.
-            if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.PasswordHash,userToCheck.PasswordSalt))
+            if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.PasswordHash, userToCheck.PasswordSalt))
             {
                 return new ErrorDataResult<User>(Messages.PasswordError);
             }
@@ -61,12 +61,12 @@ namespace Business.Concrete
                 Status = true // Kullanıcının aktiflik durumu.
             };
             _userService.Add(user);
-            return new SuccessDataResult<User>(user,Messages.UserRegistered);
+            return new SuccessDataResult<User>(user, Messages.UserRegistered);
         }
 
         public IResult UserExist(string email) // Kullanıcının sistemde olup olmadığını kontrol etmek için kullanılır.
         {
-            if (_userService.GetByMail(email)!=null) // kullanıcı varsa.
+            if (_userService.GetByMail(email) != null) // kullanıcı varsa.
             {
                 return new ErrorResult(Messages.UserAlreadyExists); // Kullanıcı zaten var ise.
             }

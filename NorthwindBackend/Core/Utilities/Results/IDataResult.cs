@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Core.Utilities.Results
 {
-    public interface IDataResult<T>:IResult // IResult içindeki success ve message var.
+    public interface IDataResult<T>:IResult 
     {
-        // success ve message'a ek olarak.
+        
         T Data { get; }
     }
 }

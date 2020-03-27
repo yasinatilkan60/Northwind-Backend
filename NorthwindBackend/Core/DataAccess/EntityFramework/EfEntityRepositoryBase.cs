@@ -1,23 +1,22 @@
-﻿using Core.Entities;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using Core.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Core.DataAccess.EntityFramework
 {
-    public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity> // T -> Type
-    where TEntity : class, IEntity, new() // TEntity new'lenebilir ve IEntity implementini içersin.
-    where TContext : DbContext, new() // // TContext new'lenebilir ve IEntity implementini içersin.
+    public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
+    where TEntity : class, IEntity, new()
+    where TContext : DbContext, new()
     {
         public void Add(TEntity entity)
         {
-            // Using disposable pattern'dır. Yani işi garbage collector'a bırakmaz. Using sonlandığında nesneyi bellekten siler.
-            using (var context = new TContext())  // EF eklemesi gerektiğini bilir.
+            using (var context = new TContext())
             {
-                var addedEntity = context.Entry(entity); // Gönderilen entity'e context'i abone et.
+                var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
                 context.SaveChanges();
             }
@@ -25,9 +24,9 @@ namespace Core.DataAccess.EntityFramework
 
         public void Delete(TEntity entity)
         {
-            using (var context = new TContext()) // EF silmesi gerektiğini bilir.
+            using (var context = new TContext())
             {
-                var deletedEntity = context.Entry(entity); // Gönderilen entity'e context'i abone et.
+                var deletedEntity = context.Entry(entity);
                 deletedEntity.State = EntityState.Deleted;
                 context.SaveChanges();
             }
@@ -37,7 +36,7 @@ namespace Core.DataAccess.EntityFramework
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>().SingleOrDefault(filter); // Set abone olma operasyonudur. Filtreye göre o datanın gelmesi sağlanır.
+                return context.Set<TEntity>().SingleOrDefault(filter);
             }
         }
 
@@ -46,15 +45,16 @@ namespace Core.DataAccess.EntityFramework
             using (var context = new TContext())
             {
                 return filter == null
-                    ? context.Set<TEntity>().ToList() : context.Set<TEntity>().Where(filter).ToList(); // Filtreye göre liste getirsin, filter yoksa hepsini getirsin.
+                    ? context.Set<TEntity>().ToList()
+                    : context.Set<TEntity>().Where(filter).ToList();
             }
         }
 
         public void Update(TEntity entity)
         {
-            using (var context = new TContext()) // EF güncellemesi gerektiğini bilir.
+            using (var context = new TContext())
             {
-                var updatedEntity = context.Entry(entity); // Gönderilen entity'e context'i abone et.
+                var updatedEntity = context.Entry(entity);
                 updatedEntity.State = EntityState.Modified;
                 context.SaveChanges();
             }

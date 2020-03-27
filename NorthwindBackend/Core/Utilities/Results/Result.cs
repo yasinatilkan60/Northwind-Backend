@@ -6,12 +6,12 @@ namespace Core.Utilities.Results
 {
     public class Result : IResult
     {
-        // genelde yönetim constructor ile olur.
-        public Result(bool success, string message):this(success) // this ile iki parametre gelirse tek parametreli ctor'da çalıştırılmıştır.
+        
+        public Result(bool success, string message):this(success) 
         {
             Message = message;
         }
-        public Result(bool success) // Tek parametre gelirse sadece bu ctor çalıştırılır.
+        public Result(bool success) 
         {
             Success = success;
         }

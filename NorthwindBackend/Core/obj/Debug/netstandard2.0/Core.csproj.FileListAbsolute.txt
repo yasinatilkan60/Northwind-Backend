@@ -1,8 +1,8 @@
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\bin\Debug\netstandard2.0\Core.deps.json
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\bin\Debug\netstandard2.0\Core.dll
-B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\bin\Debug\netstandard2.0\Core.pdb
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.dll
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.pdb
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache

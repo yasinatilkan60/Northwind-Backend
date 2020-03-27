@@ -13,7 +13,8 @@ namespace Business.Abstract
         IDataResult<List<Product>> GetListByCategory(int categoryId);
         IResult Add(Product product); // Data döndürmek istemiyorum, Başarılı mı oldum ? Başarısız mı oldum ?  
         IResult Delete(Product product);
-        IResult Update(Product product); 
+        IResult Update(Product product);
+        IResult TransactionalOperation(Product product);
         
     }
 }

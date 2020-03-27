@@ -1,6 +1,6 @@
 ﻿using Core.Entities.Concrete;
 using Core.Extensions;
-using Core.Utilities.Security.Encyription;
+using Core.Utilities.Security.Encyption;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -18,7 +18,7 @@ namespace Core.Utilities.Security.Jwt
         public IConfiguration Configuration { get; }// IConfiguration ile aynı konfigürasyonu yarın başka bir apiden de kullanabilirim. 
         private TokenOptions _tokenOptions; // appsetting.json içerisinden gelecek TokenOptions alanını burdaki nesneye aktaracağız.
         DateTime _accessTokenExpiration; // Bunu da ctorda set edeceğiz çünkü her yerde kullacağız.
-        public JwtHelper(IConfiguration configuration)
+        public JwtHelper(IConfiguration configuration) // Api tarafında bu konfigürasyonun tanımlanması gerekmektedir. (Startup.cs ve appsettings.json)
         {
             Configuration = configuration; // appsetting.json içerisinden gelecek veriyi burada configuration ile okuyacağız.
             _tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>(); // Artık elimizde Audience, Issuer vs gibi alanların olduğu bir token nesnesi vardır.
@@ -34,7 +34,7 @@ namespace Core.Utilities.Security.Jwt
             // Signing  credential; bizim security key ve algoritmamızı belirlemiş olduğumuz nesnedir.
             var signingCredentials = SigningCredentialsHelper.CreateSigningCredentials(securityKey);
 
-            var jwt = CreateJwtSecurityToken(_tokenOptions,user,signingCredentials,operationClaims);
+            var jwt = CreateJwtSecurityToken(_tokenOptions, user, signingCredentials, operationClaims);
             // Token muvcut ama elimizdeki tokenı handler ile yazmalıyız.
             var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             var token = jwtSecurityTokenHandler.WriteToken(jwt); // WriteToken ile token string'e çevrilmiştir.
@@ -48,12 +48,12 @@ namespace Core.Utilities.Security.Jwt
 
         // İhtiyacamız olan bilgiler token bilgileri (_tokenOptions), Kullanıcı bilgilerini, signingCredentials bilgilerini ve kullanıcı rollerini
         // kullanarak bir adet token oluşturacağız.
-        public JwtSecurityToken CreateJwtSecurityToken(TokenOptions tokenOptions, User user, SigningCredentials signingCredentials, 
+        public JwtSecurityToken CreateJwtSecurityToken(TokenOptions tokenOptions, User user, SigningCredentials signingCredentials,
             List<OperationClaim> operationClaims)
         {
             var jwt = new JwtSecurityToken(
-                    issuer:tokenOptions.Issuer,
-                    audience:tokenOptions.Audience,
+                    issuer: tokenOptions.Issuer,
+                    audience: tokenOptions.Audience,
                     expires: _accessTokenExpiration,
                     notBefore: DateTime.Now, // Token'ın expiration bilgisi şu andan önce ise geçerli olmayacaktır.
                     claims: SetClaims(user, operationClaims), //claims: operationClaims, // Bir claim isteniyor.
@@ -75,6 +75,11 @@ namespace Core.Utilities.Security.Jwt
             claims.AddName($"{user.FirstName} {user.LastName}");
             claims.AddRoles(operationClaims.Select(c => c.Name).ToArray()); // operationClaims.Select(c => c.Name).ToArray() ile dizi şeklinde extension'a gönderim yapıldı.
             return claims;
+        }
+
+        public AccessToken CreateToken(User user)
+        {
+            throw new NotImplementedException();
         }
     }
 }

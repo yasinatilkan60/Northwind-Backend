@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace WebAPI.Controllers
 {
@@ -20,8 +22,11 @@ namespace WebAPI.Controllers
         {
             _productService = productService;
         }
-
+        // Rol bazlı yapılar projenin ihtiyacına göre şekillenir.
+        //[Authorize] // Kişinin Authorize olması yeterlidir. İstekte token yollanması gerekmektedir.
         [HttpGet("getall")]
+        // Authorize burada değil business katmanında yazılmalıdır.
+        //[Authorize(Roles="Product.List")] // Ayrıca Product.List yetkisi de aranmaktadır. Artık 403 Forbidden hatasını alırız.
         public IActionResult GetList()
         {
             var result = _productService.GetList();
@@ -83,6 +88,18 @@ namespace WebAPI.Controllers
         public IActionResult Delete(Product product)
         {
             var result = _productService.Delete(product);
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+            return BadRequest(result.Message);
+        }
+
+        [HttpPost("transaction")]
+
+        public IActionResult TransactionTest(Product product)
+        {
+            var result = _productService.TransactionalOperation(product);
             if (result.Success)
             {
                 return Ok(result.Message);
