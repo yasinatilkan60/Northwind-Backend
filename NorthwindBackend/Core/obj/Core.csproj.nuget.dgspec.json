@@ -94,6 +94,10 @@
             "System.Security.Claims": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
             }
           },
           "imports": [

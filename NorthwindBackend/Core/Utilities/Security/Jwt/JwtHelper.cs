@@ -22,11 +22,12 @@ namespace Core.Utilities.Security.Jwt
         {
             Configuration = configuration; // appsetting.json içerisinden gelecek veriyi burada configuration ile okuyacağız.
             _tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>(); // Artık elimizde Audience, Issuer vs gibi alanların olduğu bir token nesnesi vardır.
-            _accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration); // Artık elimizde dakika değil bir tarih vardır.
+            
         }
         public AccessToken CreateToken(User user, List<OperationClaim> operationClaims)
         {
             // Token'ı oluştururken;
+            _accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration); // Artık elimizde dakika değil bir tarih vardır.
             // var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenOptions.SecurityKey)); // Bu kod standart bir kod olduğundan her seferinde aynı işlemi yapmak istemiyoruz.
             var securityKey = SecurityKeyHelper.CreateSecurityKey(_tokenOptions.SecurityKey);
 
@@ -77,9 +78,9 @@ namespace Core.Utilities.Security.Jwt
             return claims;
         }
 
-        public AccessToken CreateToken(User user)
-        {
-            throw new NotImplementedException();
-        }
+        //public AccessToken CreateToken(User user)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

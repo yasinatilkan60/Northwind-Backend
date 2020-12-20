@@ -156,4 +156,7 @@ B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\n
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\log4net.config
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\log4net.dll
+B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\MicroKnights.Log4NetAdoNetAppender.dll
 B:\Bilgisayar\udemy\Net_Core_Egitim\projects\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache

@@ -9,7 +9,7 @@ namespace Core.Utilities.Results
         public ErrorResult(bool success, string message) : base(false, message)
         {
         }
-        public ErrorResult(string message) : base(false)
+        public ErrorResult(string message) : base(false,message)
         {
         }
 

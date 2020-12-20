@@ -21,7 +21,7 @@ namespace Core.Aspects.Autofac.Transaction
                     invocation.Proceed(); // metodu çalıştır.
                     transactionScope.Complete(); // işlemi kabul et ve çalıştır.
                 }
-                catch (Exception)
+                catch (System.Exception)
                 {
                     transactionScope.Dispose(); // Başarılı değil ise yapılan işlemleri geri al ve hata fırlat.
                     throw;

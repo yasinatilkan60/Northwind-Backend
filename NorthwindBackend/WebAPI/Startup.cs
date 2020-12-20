@@ -70,6 +70,8 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.ConfigureCustomExceptionMiddleware(); // IApplicationBuilder extend edildiði için kullanýldý.
+
             app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader()); // MiddleWear iþlemi / Gelen her istegi kabul et.
             app.UseHttpsRedirection();
 
@@ -78,10 +80,6 @@ namespace WebAPI
             app.UseAuthentication(); // Bir anahtar.
 
             app.UseAuthorization(); // Bir iþlemi yapabilmek için yetki.
-
-            
-            
-            
 
             app.UseEndpoints(endpoints =>
             {

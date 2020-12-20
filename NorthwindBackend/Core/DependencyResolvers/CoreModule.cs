@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace Core.DependencyResolvers
@@ -18,6 +19,7 @@ namespace Core.DependencyResolvers
             services.AddSingleton<ICacheManager, MemoryCacheManager>(); // ICacheManager istenirse, MemoryCacheManager verilecektir.
             // Örneğin microsoft yerine başka bir sisteme geçilirse MemoryCacheManager yerine başka manager yazılması yeterli olacaktır.
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); // bu sayede artık user'a erişebileceğiz.
+            services.AddSingleton<Stopwatch>();
         }
     }
 }
